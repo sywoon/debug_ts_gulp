@@ -16,8 +16,8 @@ function roComple() {
         plugins: [
             typescript({
                 check: false,
-                clean:true,
-                tsconfigOverride: { compilerOptions: { removeComments: true } }
+                clean:true
+                // tsconfigOverride: { compilerOptions: { removeComments: true } }
             }),
 
         ]
