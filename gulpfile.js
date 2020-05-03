@@ -3,10 +3,11 @@ const ts = require("gulp-typescript");
 const rollup = require("rollup");
 const typescript = require('rollup-plugin-typescript2');
 
-gulp.task('default', function () {
-    return roComple();
-})
 
+const browerServer = done => {
+    gulp.watch('./src/**/*.ts', gulp.series(roComple))
+    done()
+}
 
 function roComple() {
     return rollup.rollup({
@@ -29,3 +30,8 @@ function roComple() {
         });
     });
 }
+
+// gulp.task('default', function () {
+//     return roComple();
+// })
+gulp.task('default',gulp.series(roComple, browerServer))
