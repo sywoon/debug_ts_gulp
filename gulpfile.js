@@ -2,6 +2,8 @@ const gulp = require("gulp");
 const ts = require("gulp-typescript");
 const rollup = require("rollup");
 const typescript = require('rollup-plugin-typescript2');
+const uglify = require("gulp-uglify")
+const concat = require("gulp-concat")
 
 
 const browerServer = done => {
